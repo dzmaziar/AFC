@@ -15,7 +15,7 @@ namespace AFC
         }
         public static void WriteToFile(String path, String text)
         {
-            File.WriteAllText(path, text);
+            File.AppendAllText(path, text);
         }
     }
 }
