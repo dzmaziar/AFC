@@ -43,17 +43,11 @@ namespace AFC
                 counter++;
                 if (counter % 5000000 == 0)
                 {
-                    Console.WriteLine(counter);
-                   
+                    Console.WriteLine(counter); 
                 }
-                
                 for (int i = 0; i < 10; i++)
                 {
                     tempCombination.Add(skinsArray[indexArr[i]-1]);       //[i]-1 because filling was [i]+1
-                }
-                if (counter == 620598245)
-                {
-                    Console.WriteLine(String.Join("\n", tempCombination));
                 }
                 averageFloatOfCombination = GetAverageFloatOfSkins(tempCombination);
                 if (Convert.ToSingle(averageFloatOfCombination) == reqFloat)
