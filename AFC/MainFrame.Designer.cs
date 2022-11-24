@@ -39,6 +39,7 @@
             this.ViewProcessDataButton = new System.Windows.Forms.Button();
             this.dataTextBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.floatTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backMainFramepictureBox1)).BeginInit();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.Controls.Add(this.floatTextBox);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.doCalculationButton);
             this.panel1.Controls.Add(this.backMainFramepictureBox1);
@@ -74,7 +76,7 @@
             // 
             this.doCalculationButton.BackColor = System.Drawing.Color.Transparent;
             this.doCalculationButton.Enabled = false;
-            this.doCalculationButton.Location = new System.Drawing.Point(534, 196);
+            this.doCalculationButton.Location = new System.Drawing.Point(544, 250);
             this.doCalculationButton.Name = "doCalculationButton";
             this.doCalculationButton.Size = new System.Drawing.Size(196, 55);
             this.doCalculationButton.TabIndex = 5;
@@ -140,6 +142,14 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // floatTextBox
+            // 
+            this.floatTextBox.BackColor = System.Drawing.Color.Silver;
+            this.floatTextBox.Location = new System.Drawing.Point(584, 193);
+            this.floatTextBox.Name = "floatTextBox";
+            this.floatTextBox.Size = new System.Drawing.Size(110, 27);
+            this.floatTextBox.TabIndex = 7;
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -168,5 +178,6 @@
         private Button doCalculationButton;
         private PictureBox pictureBox1;
         public TextBox dataTextBox1;
+        private TextBox floatTextBox;
     }
 }

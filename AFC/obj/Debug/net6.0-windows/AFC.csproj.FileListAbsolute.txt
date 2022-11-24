@@ -30,3 +30,4 @@ D:\Tasks\AFC\obj\Debug\net6.0-windows\AFC.ViewDataBase.resources
 D:\Tasks\AFC\obj\Debug\net6.0-windows\AFC.Calulator.resources
 D:\Tasks\AFC\obj\Debug\net6.0-windows\AFC.MainFrame.resources
 D:\Tasks\AFC\obj\Debug\net6.0-windows\AFC.ViewProcces.resources
+D:\Tasks\AFC\obj\Debug\net6.0-windows\AFC.DoCalculation.resources

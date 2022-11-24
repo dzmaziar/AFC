@@ -67,19 +67,20 @@ namespace AFC
             return buff;
         }
 
-       
-       private void dataTextBox1_TextChanged(object sender, EventArgs e)
+        string nameOfGun = null;
+        private void dataTextBox1_TextChanged(object sender, EventArgs e)
         {
-            string a = searchOnPage();
-            if(a==null)
+            
+            nameOfGun=searchOnPage();
+            if(nameOfGun == null)
             {
                 return;
             }
                 DataBase db = new DataBase();
             db.openConnection();
             string collection="", quality="";
-            string quary1 = "SELECT collection FROM afc WHERE name = '"+a+"'";
-            string quary2 = "SELECT quality FROM afc WHERE name = '" + a + "'";
+            string quary1 = "SELECT collection FROM afc WHERE name = '"+ nameOfGun + "'";
+            string quary2 = "SELECT quality FROM afc WHERE name = '" + nameOfGun + "'";
             MySqlCommand command = new MySqlCommand(quary1,db.getConnection());
             MySqlDataReader reader = command.ExecuteReader();
             
@@ -168,6 +169,45 @@ namespace AFC
 
         private void doCalculationButton_Click(object sender, EventArgs e)
         {
+            DataBase db = new DataBase();
+            db.openConnection();
+            string selectGun = "";
+            selectGun=DatacomboBox1.SelectedItem.ToString();
+            double minFloat =0, maxFloat = 0;
+            string quary1 = "SELECT minimum FROM afc WHERE name = '" + selectGun + "'";
+            string quary2 = "SELECT maximum FROM afc WHERE name = '" + selectGun + "'";
+            MySqlCommand command = new MySqlCommand(quary1, db.getConnection());
+            MySqlDataReader reader = command.ExecuteReader();
+        
+
+            while (reader.Read())
+            {
+                minFloat = double.Parse(reader[0].ToString());
+            }
+            reader.Close();
+            MySqlCommand command2 = new MySqlCommand(quary2, db.getConnection());
+            MySqlDataReader reader2 = command2.ExecuteReader();
+            while (reader2.Read())
+            {
+                maxFloat = double.Parse(reader2[0].ToString());
+            }
+            reader.Close();
+            reader2.Close();
+            db.closeConnection();
+            float floatNeed = float.Parse(floatTextBox.Text);
+            string floatBuff = null;
+            if(floatNeed<minFloat || floatNeed> maxFloat )
+            {
+                MessageBox.Show("Невозможно скрафтить такой скин, проверьте базу флоатов");
+                return;
+            }
+            floatBuff = dataTextBox1.Text.ToString();
+            List<double> floatList = new List<double>();
+            floatList = (FloatHighLighter.HighLightFloats(floatBuff));
+            string answer = null;
+            answer = Calculator.DoCalculations(floatList, floatNeed, minFloat, maxFloat);
+            DoCalculation add = new DoCalculation(answer);
+            add.Show();
 
         }
 

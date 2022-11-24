@@ -24,7 +24,7 @@ namespace AFC
             tempSum = Convert.ToSingle(tempSum);
             return Convert.ToDouble(tempSum / skins.Count);
         }
-        public static void DoCalculations(List<double> skinsArray, double floatYouNeed, double minFloat, double maxFloat, String path) //Delete "path" when UI added
+        public static string DoCalculations(List<double> skinsArray, double floatYouNeed, double minFloat, double maxFloat) //Delete "path" when UI added
         {
             double reqFloat = Convert.ToSingle(GetRequiredAverageFloat(floatYouNeed, minFloat, maxFloat));
             int N = skinsArray.Count;
@@ -53,10 +53,11 @@ namespace AFC
                 if (Convert.ToSingle(averageFloatOfCombination) == reqFloat)
                 {
                     String str = String.Join("\n", tempCombination);
-                                         //When UI added show combination in UI
+                    return str;                 //When UI added show combination in UI
                                        //Delete when UI added
                 }
             }
+            return null;
         }
     }
 }

@@ -7,6 +7,9 @@
     <Compile Update="Calulator.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DoCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>

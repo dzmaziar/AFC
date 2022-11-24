@@ -88,7 +88,7 @@
         #endregion
 
         private Panel ViewProccessPanel1;
-        private DataGridView dataGridView1;
+        internal DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Name;
         private DataGridViewTextBoxColumn Float;
     }
