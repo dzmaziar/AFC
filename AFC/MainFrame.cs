@@ -15,12 +15,15 @@ namespace AFC
     {
         public MainFrame()
         {
-            InitializeComponent();
+          
+              InitializeComponent();
+            
         }
 
         private void ViewProcessDataButton_Click(object sender, EventArgs e)
         {
             ViewProcces add = new ViewProcces();
+            add.Text = dataTextBox1.Text.ToString();
             add.Show();
             
         }
@@ -64,7 +67,7 @@ namespace AFC
             return buff;
         }
 
-
+       
        private void dataTextBox1_TextChanged(object sender, EventArgs e)
         {
             string a = searchOnPage();
@@ -103,8 +106,10 @@ namespace AFC
                     string quary3 = "SELECT name FROM afc WHERE collection = '" + collection + "' AND quality = 'Convert'";
                     MySqlCommand command3 = new MySqlCommand(quary3, db.getConnection());
                     MySqlDataReader reader3 = command3.ExecuteReader();
-                    for (int i = 0; reader3.Read(); i++)
-                    { DatacomboBox1.Items.Add(reader3[i].ToString()); }
+                    while (reader3.Read())
+                    {
+                        DatacomboBox1.Items.Add(reader3[0].ToString());
+                    }
                     reader3.Close();
                     break;
 
@@ -112,8 +117,10 @@ namespace AFC
                     string quary4 = "SELECT name FROM afc WHERE collection = '" + collection + "' AND quality = 'Classified'";
                     MySqlCommand command4 = new MySqlCommand(quary4, db.getConnection());
                     MySqlDataReader reader4 = command4.ExecuteReader();
-                    for (int i = 0; reader4.Read(); i++)
-                    { DatacomboBox1.Items.Add(reader4[i].ToString()); }
+                    while (reader4.Read())
+                    {
+                        DatacomboBox1.Items.Add(reader4[0].ToString());
+                    }
                     reader4.Close();
                     break;
 
@@ -121,12 +128,12 @@ namespace AFC
                     string quary5 = "SELECT name FROM afc WHERE collection = '" + collection + "' AND quality = 'Restricted'";
                     MySqlCommand command5 = new MySqlCommand(quary5, db.getConnection());
                     MySqlDataReader reader5 = command5.ExecuteReader();
-                    List<string> data = new List<string>();
-                    for (int i = 0; reader5.Read(); i++)
-                    { data.Add(reader5[i].ToString()); }
-
-                    var array = data.ToArray();
-                     DatacomboBox1.Items.AddRange(array); 
+                   
+                    while (reader5.Read())
+                    {
+                        DatacomboBox1.Items.Add(reader5[0].ToString());
+                    }
+                
                     reader5.Close();
                     break;
 
@@ -134,8 +141,10 @@ namespace AFC
                     string quary6 = "SELECT name FROM afc WHERE collection = '" + collection + "' AND quality = 'Mil-Spec'";
                     MySqlCommand command6 = new MySqlCommand(quary6, db.getConnection());
                     MySqlDataReader reader6 = command6.ExecuteReader();
-                    for (int i = 0; reader6.Read(); i++)
-                    { DatacomboBox1.Items.Add(reader6[i].ToString()); }
+                    while (reader6.Read())
+                    {
+                        DatacomboBox1.Items.Add(reader6[0].ToString());
+                    }
                     reader6.Close();
                     break;
 
@@ -143,8 +152,10 @@ namespace AFC
                     string quary7 = "SELECT name FROM afc WHERE collection = '" + collection + "' AND quality = 'Industrial Grade'";
                     MySqlCommand command7 = new MySqlCommand(quary7, db.getConnection());
                     MySqlDataReader reader7 = command7.ExecuteReader();
-                    for (int i = 0; reader7.Read(); i++)
-                    { DatacomboBox1.Items.Add(reader7[i].ToString()); }
+                    while (reader7.Read())
+                    {
+                        DatacomboBox1.Items.Add(reader7[0].ToString());
+                    }
                     reader7.Close();
                     break;
 
@@ -153,6 +164,21 @@ namespace AFC
             }
             db.closeConnection();
             
+        }
+
+        private void doCalculationButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DatacomboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            doCalculationButton.Enabled = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            dataTextBox1.Text = "0";
         }
     }
 }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.doCalculationButton = new System.Windows.Forms.Button();
             this.backMainFramepictureBox1 = new System.Windows.Forms.PictureBox();
             this.DatacomboBox1 = new System.Windows.Forms.ComboBox();
             this.getRecommenationButton = new System.Windows.Forms.Button();
@@ -38,12 +40,15 @@
             this.dataTextBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backMainFramepictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.doCalculationButton);
             this.panel1.Controls.Add(this.backMainFramepictureBox1);
             this.panel1.Controls.Add(this.DatacomboBox1);
             this.panel1.Controls.Add(this.getRecommenationButton);
@@ -53,6 +58,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 797);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // doCalculationButton
+            // 
+            this.doCalculationButton.BackColor = System.Drawing.Color.Transparent;
+            this.doCalculationButton.Enabled = false;
+            this.doCalculationButton.Location = new System.Drawing.Point(534, 196);
+            this.doCalculationButton.Name = "doCalculationButton";
+            this.doCalculationButton.Size = new System.Drawing.Size(196, 55);
+            this.doCalculationButton.TabIndex = 5;
+            this.doCalculationButton.Text = "Do Calculation";
+            this.doCalculationButton.UseVisualStyleBackColor = false;
+            this.doCalculationButton.Click += new System.EventHandler(this.doCalculationButton_Click);
             // 
             // backMainFramepictureBox1
             // 
@@ -73,6 +101,7 @@
             this.DatacomboBox1.Name = "DatacomboBox1";
             this.DatacomboBox1.Size = new System.Drawing.Size(770, 28);
             this.DatacomboBox1.TabIndex = 3;
+            this.DatacomboBox1.SelectionChangeCommitted += new System.EventHandler(this.DatacomboBox1_SelectionChangeCommitted);
             // 
             // getRecommenationButton
             // 
@@ -122,6 +151,7 @@
             this.Text = "MainFrame";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backMainFramepictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -132,9 +162,11 @@
         private Panel panel1;
         private Button getRecommenationButton;
         private Button ViewProcessDataButton;
-        private TextBox dataTextBox1;
         private ContextMenuStrip contextMenuStrip1;
         private ComboBox DatacomboBox1;
         private PictureBox backMainFramepictureBox1;
+        private Button doCalculationButton;
+        private PictureBox pictureBox1;
+        public TextBox dataTextBox1;
     }
 }

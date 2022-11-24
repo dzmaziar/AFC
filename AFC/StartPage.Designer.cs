@@ -30,7 +30,7 @@
         {
             this.backGround = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.instructionButton = new System.Windows.Forms.Button();
             this.buttonDataBase = new System.Windows.Forms.Button();
             this.buttonCalculator = new System.Windows.Forms.Button();
             this.buttonMainFrame = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.instructionButton, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonDataBase, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonCalculator, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.buttonMainFrame, 2, 0);
@@ -72,14 +72,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(542, 208);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // button2
+            // instructionButton
             // 
-            this.button2.Location = new System.Drawing.Point(138, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 202);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.instructionButton.Location = new System.Drawing.Point(138, 3);
+            this.instructionButton.Name = "instructionButton";
+            this.instructionButton.Size = new System.Drawing.Size(129, 202);
+            this.instructionButton.TabIndex = 1;
+            this.instructionButton.Text = "Instruction";
+            this.instructionButton.UseVisualStyleBackColor = true;
+            this.instructionButton.Click += new System.EventHandler(this.instructionButton_Click);
             // 
             // buttonDataBase
             // 
@@ -130,7 +131,7 @@
 
         private Panel backGround;
         private TableLayoutPanel tableLayoutPanel1;
-        private Button button2;
+        private Button instructionButton;
         private Button buttonDataBase;
         private Button buttonCalculator;
         private Button buttonMainFrame;

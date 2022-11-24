@@ -51,5 +51,13 @@ namespace AFC
             add.Show();
             this.Hide();
         }
+
+        private void instructionButton_Click(object sender, EventArgs e)
+        {
+            string path = @"D:\Tasks\AFC\bin\pageCopy.txt";//Путь до файла
+                //Открыть программой по умолчанию:
+            Process.Start(new ProcessStartInfo { FileName=path, UseShellExecute=true});
+    
+        }
     }
 }
