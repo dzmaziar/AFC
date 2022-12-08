@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Presenter\CalulatorPresenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\AddToDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Calulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\DoCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\MainFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\StartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\ViewDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\ViewProcces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFC", "AFC.csproj", "{2F8C48A7-E1B0-415F-9D40-EEF79C03CE89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFCLibrary", "..\AFCLibrary\AFCLibrary.csproj", "{E4654DCE-666B-481F-B972-51B257DA7C6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F8C48A7-E1B0-415F-9D40-EEF79C03CE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F8C48A7-E1B0-415F-9D40-EEF79C03CE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F8C48A7-E1B0-415F-9D40-EEF79C03CE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F8C48A7-E1B0-415F-9D40-EEF79C03CE89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4654DCE-666B-481F-B972-51B257DA7C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4654DCE-666B-481F-B972-51B257DA7C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4654DCE-666B-481F-B972-51B257DA7C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4654DCE-666B-481F-B972-51B257DA7C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCCDAEA6-1053-47D5-8A42-A17F7C7FCAFA}
+	EndGlobalSection
+EndGlobal
