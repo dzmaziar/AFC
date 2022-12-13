@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74B2D0FE-C52B-4004-A085-E91CCEA1C36D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presenter</RootNamespace>
+    <AssemblyName>Presenter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Presenter\CalulatorPresenter.cs" />
+    <Compile Include="Presenter\CheckFloatRange.cs" />
+    <Compile Include="Presenter\DoCalculationPresenter.cs" />
+    <Compile Include="Presenter\MainFramePresenter.cs" />
+    <Compile Include="Presenter\SearchNameOnPage.cs" />
+    <Compile Include="Presenter\ViewProcessedDataPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ICalulatorView.cs" />
+    <Compile Include="View\IDoCalculationView.cs" />
+    <Compile Include="View\IMainFrameView.cs" />
+    <Compile Include="View\IViewDataProccess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presenter\CalulatorPresenter.resx">
+      <DependentUpon>CalulatorPresenter.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files %28x86%29\MySQL\MySQL Connector NET 8.0.31\Assemblies\net6.0\MySql.Data.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{2e6de4ea-701a-4e4f-9064-48134f44722a}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

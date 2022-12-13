@@ -1,0 +1,2 @@
+D:\Tasks\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\Tasks\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache

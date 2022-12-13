@@ -1,0 +1,4 @@
+D:\Tasks\Presenter\obj\Debug\Presenter.csproj.AssemblyReference.cache
+D:\Tasks\Presenter\obj\Debug\Presenter.CalulatorPresenter.resources
+D:\Tasks\Presenter\obj\Debug\Presenter.csproj.GenerateResource.cache
+D:\Tasks\Presenter\obj\Debug\Presenter.csproj.CoreCompileInputs.cache
