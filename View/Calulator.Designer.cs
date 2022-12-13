@@ -1,5 +1,4 @@
-﻿using AFClibrary;
-namespace AFC
+﻿namespace AFC
 {
     partial class Calulator
     {

@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AFC.DAO;
-
+using DAO;
+using Presenter;
 namespace AFC
 {
     public partial class ViewDataBase : Form

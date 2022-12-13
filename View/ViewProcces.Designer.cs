@@ -72,13 +72,13 @@
             this.Float.Name = "Float";
             this.Float.Width = 125;
             // 
-            // ViewProcces
+            // ViewProcessedData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 725);
             this.Controls.Add(this.ViewProccessPanel1);
-            this.Text = "ViewProcces";
+            this.Text = "ViewProcessedData";
             this.ViewProccessPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

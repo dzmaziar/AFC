@@ -1,48 +1,38 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using AFC.Presenter;
-using AFClibrary;
-
+﻿using Presenter;
+using Presenter.View;
 namespace AFC
 {
-    public partial class MainFrame : Form
+    public partial class MainFrame : Form, IMainFrameView
     {
+       private MainFramePresenter _presenter;
         public MainFrame()
         {
-          
-              InitializeComponent();
-            
+
+            InitializeComponent();
+            _presenter = new MainFramePresenter(this);
+
+
         }
         private void ViewProcessDataButton_Click(object sender, EventArgs e)
         {
             ViewProcces add = new ViewProcces();
             add.Text = dataTextBox1.Text;
             add.Show();
-            
+
         }
         private void backMainFramepictureBox1_Click(object sender, EventArgs e)
         {
             StartPage add = new StartPage();
             add.Show();
             this.Hide();
-
         }
         private void dataTextBox1_TextChanged(object sender, EventArgs e)
         {
-
-            MainFramePresenter.SelectGun(dataTextBox1.Text,DatacomboBox1);
+            _presenter.SelectGun(dataTextBox1.Text);
         }
         private void doCalculationButton_Click(object sender, EventArgs e)
         {
-            MainFramePresenter.Counting(DatacomboBox1,floatTextBox,dataTextBox1);
+            _presenter.Counting();
         }
         private void DatacomboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -59,6 +49,31 @@ namespace AFC
             DatacomboBox1.Text = "";
             doCalculationButton.Enabled = false;
             floatTextBox.Clear();
+        }
+
+        public void SetComboBox(string[] list)
+        {
+            DatacomboBox1.Items.AddRange(list);
+        }
+
+        public string GetSelectedItem()
+        {
+            return DatacomboBox1.SelectedItem.ToString();
+        }
+
+        public void ViewMessageBox(string message)
+        {
+            MessageBox.Show(message);
+        }
+
+        public string GetFloatText()
+        {
+           return floatTextBox.Text;
+        }
+
+        public string GetdataText()
+        {
+            return dataTextBox1.Text;
         }
     }
 }

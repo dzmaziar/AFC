@@ -8,21 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AFC.Presenter;
-using AFClibrary;
+using Presenter;
+using Presenter.View;
 
 namespace AFC
 {
-    public partial class ViewProcces : Form
+    public partial class ViewProcces : Form, IViewDataProccess
     {
+        ViewProcessedDataPresenter _presenter;
         public ViewProcces()
         {
             InitializeComponent();
+            _presenter = new ViewProcessedDataPresenter(this);
         }
-        
+
+        public void SetData(string buff,List<string> arr)
+        {
+            for (int i = 0; i < arr.Count; i++)
+            {
+
+                dataGridView1.Rows.Add(buff, arr[i]);
+            }
+        }
+
         private void ViewProccessPanel1_Paint(object sender, PaintEventArgs e)
         {
-            ViewProccesPresenter.ViewProcces(Text,dataGridView1);
+            _presenter.ViewProcessedData(Text);
         }
     }
 }
