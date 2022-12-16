@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presenterr.View
+namespace AFC.IRepository
 {
-   public interface IViewDataProccess
+    public interface IAddInDb
     {
-        void SetData(string buff,List<string> arr);
+       public List<string> GetArrayOfParameters();
     }
 }

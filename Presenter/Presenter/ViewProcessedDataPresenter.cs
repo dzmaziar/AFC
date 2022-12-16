@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Presenter.View; 
+using Presenterr.View;
+using CalculationLibrary;
+using AFC.IRepository;
+using AFC.IPresenters;
 
-namespace Presenter
+namespace Presenterr
 {
-    public class ViewProcessedDataPresenter
+    public class ViewProcessedDataPresenter:IProccessData
     {
         IViewDataProccess _view;
+        IDbStandartActions _db;
         public ViewProcessedDataPresenter(IViewDataProccess view)
         {
             _view = view;
         }
         public void ViewProcessedData(string Text)
         {
-           
-            var buff = SearchNameOnPage.searchOnPage(Text);  ;
+            ParsingPage search = new ParsingPage(_view);
+            var buff = search.searchOnPage(Text);  ;
             if (buff == "0")
             {
                 return;
@@ -33,6 +37,7 @@ namespace Presenter
                 data.Add(d.ToString());
             }
             _view.SetData(buff, data);
+
           
         }
 

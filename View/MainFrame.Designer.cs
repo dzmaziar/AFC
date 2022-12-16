@@ -31,15 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.floatTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.doCalculationButton = new System.Windows.Forms.Button();
             this.backMainFramepictureBox1 = new System.Windows.Forms.PictureBox();
             this.DatacomboBox1 = new System.Windows.Forms.ComboBox();
-            this.getRecommenationButton = new System.Windows.Forms.Button();
             this.ViewProcessDataButton = new System.Windows.Forms.Button();
             this.dataTextBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.floatTextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backMainFramepictureBox1)).BeginInit();
@@ -53,13 +52,20 @@
             this.panel1.Controls.Add(this.doCalculationButton);
             this.panel1.Controls.Add(this.backMainFramepictureBox1);
             this.panel1.Controls.Add(this.DatacomboBox1);
-            this.panel1.Controls.Add(this.getRecommenationButton);
             this.panel1.Controls.Add(this.ViewProcessDataButton);
             this.panel1.Controls.Add(this.dataTextBox1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 797);
             this.panel1.TabIndex = 0;
+            // 
+            // floatTextBox
+            // 
+            this.floatTextBox.BackColor = System.Drawing.Color.Silver;
+            this.floatTextBox.Location = new System.Drawing.Point(584, 193);
+            this.floatTextBox.Name = "floatTextBox";
+            this.floatTextBox.Size = new System.Drawing.Size(110, 27);
+            this.floatTextBox.TabIndex = 7;
             // 
             // pictureBox1
             // 
@@ -105,15 +111,6 @@
             this.DatacomboBox1.TabIndex = 3;
             this.DatacomboBox1.SelectionChangeCommitted += new System.EventHandler(this.DatacomboBox1_SelectionChangeCommitted);
             // 
-            // getRecommenationButton
-            // 
-            this.getRecommenationButton.Location = new System.Drawing.Point(915, 538);
-            this.getRecommenationButton.Name = "getRecommenationButton";
-            this.getRecommenationButton.Size = new System.Drawing.Size(206, 48);
-            this.getRecommenationButton.TabIndex = 2;
-            this.getRecommenationButton.Text = "Get Recommendation";
-            this.getRecommenationButton.UseVisualStyleBackColor = true;
-            // 
             // ViewProcessDataButton
             // 
             this.ViewProcessDataButton.BackColor = System.Drawing.Color.Transparent;
@@ -142,14 +139,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // floatTextBox
-            // 
-            this.floatTextBox.BackColor = System.Drawing.Color.Silver;
-            this.floatTextBox.Location = new System.Drawing.Point(584, 193);
-            this.floatTextBox.Name = "floatTextBox";
-            this.floatTextBox.Size = new System.Drawing.Size(110, 27);
-            this.floatTextBox.TabIndex = 7;
-            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -170,7 +159,6 @@
         #endregion
 
         private Panel panel1;
-        private Button getRecommenationButton;
         private Button ViewProcessDataButton;
         private ContextMenuStrip contextMenuStrip1;
         private ComboBox DatacomboBox1;

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presenterr.View
+namespace AFC.IPresenters
 {
-   public interface IViewDataProccess
+    public interface IMainFrame
     {
-        void SetData(string buff,List<string> arr);
+        public void SelectGun(string Text);
+        public string Counting();
+
     }
 }

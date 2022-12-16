@@ -1,5 +1,5 @@
-﻿using Presenter;
-using Presenter.View;
+﻿using Presenterr;
+using Presenterr.View;
 namespace AFC
 {
     public partial class MainFrame : Form, IMainFrameView
@@ -7,11 +7,8 @@ namespace AFC
        private MainFramePresenter _presenter;
         public MainFrame()
         {
-
             InitializeComponent();
             _presenter = new MainFramePresenter(this);
-
-
         }
         private void ViewProcessDataButton_Click(object sender, EventArgs e)
         {
@@ -32,7 +29,14 @@ namespace AFC
         }
         private void doCalculationButton_Click(object sender, EventArgs e)
         {
-            _presenter.Counting();
+
+            var text = _presenter.Counting();
+            if(text == null || text == "0")
+            {
+                return;
+            }
+            DoCalculationFrame doCalculation = new DoCalculationFrame(text);
+            doCalculation.Show();
         }
         private void DatacomboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Presenter.View;
+using Presenterr.View;
 
-namespace Presenter
+namespace Presenterr
 {
     public class DoCalculationPresenter
     {
@@ -14,16 +14,12 @@ namespace Presenter
         {
             _view = view;
         }
-
-        public void DoCalculation(string Text)
+        public void GetCalculateResult(string Text)
         {
             var answer = Text;
             var answerArray = answer.Split('\n');
             var data = new List<string>();
-            foreach (var line in answerArray)
-            {
-                data.Add(line);
-            }
+            data.AddRange(answerArray);
             _view.SetListOnGried(data);
         }
     }

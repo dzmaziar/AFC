@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Presenterr.View
+namespace AFC.IPresenters
 {
-   public interface IViewDataProccess
+   public interface IProccessData
     {
-        void SetData(string buff,List<string> arr);
+        public void ViewProcessedData(string Text);
     }
 }

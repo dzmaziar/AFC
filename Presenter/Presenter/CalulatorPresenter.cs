@@ -1,15 +1,18 @@
-﻿using Presenter.View;
+﻿using Presenterr.View;
 using System;
 using System.Collections.Generic;
-using AFCLibrary;
-namespace Presenter
+using CalculationLibrary;
+using System.Drawing;
+using AFC.IPresenters;
+
+namespace Presenterr
 {
     public class CalulatorPresenter
     {
         private ICalulatorView _view;
         public CalulatorPresenter(ICalulatorView view)
-        {
-            _view = view;
+            {
+                _view = view;
         }
 
         public void Calulator()

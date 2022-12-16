@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "AFC/1.0.0": {
         "dependencies": {
-          "AFCLibrary": "1.0.0",
+          "CalculationLibrary": "1.0.0",
           "JetBrains.ReSharper.CommandLineTools": "2022.2.4",
           "System.Data.SqlClient": "4.8.5",
           "MySql.Data": "8.0.31.0"
@@ -93,9 +93,9 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "AFCLibrary/1.0.0": {
+      "CalculationLibrary/1.0.0": {
         "runtime": {
-          "AFCLibrary.dll": {}
+          "CalculationLibrary.dll": {}
         }
       },
       "MySql.Data/8.0.31.0": {
@@ -232,7 +232,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "AFCLibrary/1.0.0": {
+    "CalculationLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
